@@ -1,0 +1,10 @@
+<p>
+  agm-marker works!
+</p>
+<agm-map [longitude]="lng" [latitude]="lat" [zoom]="zoom">
+  <agm-marker (dragEnd)="markerDragEnd($event)" [latitude]="lat" [longitude]="lng" [markerDraggable]="draggable">
+
+  </agm-marker>
+</agm-map>
+<input type="text" [(ngModel)]="descrip">
+{{descrip}}

@@ -1,0 +1,42 @@
+<p>
+  job-executor works!
+</p>
+<section>
+  <div id="frugalmap" >
+
+  </div>
+  <form role="form" novalidate [formGroup]="formJob">
+    <td>
+      <button readonly type="button" class="btn btn-secondary" [routerLink]="['/jobexecutorsLFT']"> LEAFLET Maps
+      </button>
+      <button readonly type="button" class="btn btn-secondary" [routerLink]="['/agmMarker']"> google Maps
+      </button>
+    </td>
+    <table>
+      <tr>
+        <td><label for="description">Description</label></td>
+        <td><input formControlName="description" id="description" type="text" name="description"></td>
+      </tr>
+      <tr>
+        <td><label for="lat"></label>Latitude</td>
+        <td>
+          <label>{{lati}}</label>
+          <input formControlName="lat" id="lat" type="text" name="lat" ></td>
+      </tr>
+      <tr>
+        <td><label for="lng"></label>Longitude</td>
+        <td>
+          <label>{{long}}</label>
+          <input formControlName="lng" id="lng" type="text" name="lng" ></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="btn btn-secondary" [routerLink]="['/jobexecutors']"> Annuler</button>
+        </td>
+        <td>
+          <button (click)="saveJobExecutor()" [disabled]="formJob.invalid">Enregistrer</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
